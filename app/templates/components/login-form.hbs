@@ -1,0 +1,9 @@
+{{#if session.user}}
+  <p>Logged in as {{session.user}}</p>
+  <button {{action "logout"}}>Logout</button>
+{{else}}
+  <form>
+    {{input value=username placeholder="Username"}}
+    <button {{action "login"}}>Login</button>
+  </form>
+{{/if}}
