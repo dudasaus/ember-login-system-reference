@@ -5,7 +5,7 @@ export default Service.extend({
   login(user) {
     this.set('user', user);
   },
-  logout(user) {
+  logout() {
     this.set('user', null);
   }
 });

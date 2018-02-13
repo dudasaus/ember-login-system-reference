@@ -11,14 +11,14 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{display-logged-in}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), 'Not logged in');
 
   // Template block usage:
-  this.render(hbs`
-    {{#display-logged-in}}
-      template block text
-    {{/display-logged-in}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  // this.render(hbs`
+  //   {{#display-logged-in}}
+  //     template block text
+  //   {{/display-logged-in}}
+  // `);
+  //
+  // assert.equal(this.$().text().trim(), 'template block text');
 });
