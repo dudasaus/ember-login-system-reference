@@ -25,4 +25,17 @@ one every page
 1. In the above file, use `this.get()` and `this.set` to access member
 variables in member functions
 
-## Create a component to display whether a user is logged in or not 
+## Create a component to display whether a user is logged in or not
+
+1. `ember g component display-logged-in` will create 2 files,
+`app/components/display-logged-in.js` and
+`app/templates/components/display-logged-in.hbs`
+1. Our component needs to access our session service to see if a user is
+logged in, so edit `display-logged-in.js`
+  - `import { inject as service } from '@ember/service';` to inject/use a
+  service
+  - Add the session service as a member variable using
+  `session: service('session')` or  `session: service()` will default correctly
+1. Now in `display-logged-in.hbs` you can access the service. Use `if` and
+`else` helpers to display different content if the user is logged in or not.
+  - `{{#if session.user}} Logged in {{else}} Not logged in {{/if}}`
