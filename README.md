@@ -2,6 +2,12 @@
 
 Notes for me to reference later
 
+## ember-cli reference
+
+- `ember g` = `ember generate`
+- `ember s` = `ember serve`, defaults to port 4200
+- `ember build` or `ember build -prod` builds to `/dist/` directory
+
 ## Setting up routes
 
 1. Remove the welcome page component from `app/templates/application.hbs`
@@ -12,3 +18,11 @@ one every page
   - Use `{{#link-to "routeName"}}Link Text{{/link-to}}` helper to make links
 1. Add HTML to `index.hbs` and `accounts.hbs` templates that will appear in the
 `{{outlet}}` section of `application.hbs`.
+
+## Make a session service to remember logged in user
+
+1. `ember g service session` to make `app/services/session.js`
+1. In the above file, use `this.get()` and `this.set` to access member
+variables in member functions
+
+## Create a component to display whether a user is logged in or not 
