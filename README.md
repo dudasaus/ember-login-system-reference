@@ -1,51 +1,14 @@
-# login-system
+# Building login-system
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Notes for me to reference later
 
-## Prerequisites
+## Setting up routes
 
-You will need the following things properly installed on your computer.
-
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd login-system`
-* `npm install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+1. Remove the welcome page component from `app/templates/application.hbs`
+1. Generate index route with `ember g index` for the `/` path
+1. Generate account route with `ember g account` for the `/account/` path
+1. Add header and navigation to `app/templates/application.hbs` so they appear
+one every page
+  - Use `{{#link-to "routeName"}}Link Text{{/link-to}}` helper to make links
+1. Add HTML to `index.hbs` and `accounts.hbs` templates that will appear in the
+`{{outlet}}` section of `application.hbs`.
